@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | My Personal Website</title>
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="video/background.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 40px; background-color: #000080; border-bottom: 1px solid #ddd;">
+    <div style="width: 212px;"></div> 
+    <h1 style="margin: 0; font-family: sans-serif;">My Experience</h1>
+    <div class="header-clock">
+    <iframe src="https://free.timeanddate.com/clock/ia8fgm3t/n5090/fn6/fs18/fcfff/tc000080/pct/ahr/ftbi/pa12/tt0/tw1/tm1/th2/tb4" frameborder="0" width="188" height="68" allowtransparency="true"></iframe>
+    </div>
+</header>
+
+    <nav>
+        <a href="index.html" target="_blank">Home</a>
+        <a href="biodata.html" target="_blank">Biodata</a>
+        <a href="experience.html" target="_blank">Experience</a>
+        <a href="education.html" target="_blank">Education</a>
+        <a href="family.html" target="_blank">Family</a>
+        <a href="gallery.html" target="_blank">Gallery</a>
+    </nav>
+
+    <div class="container">
+        <h2>Introduction</h2>
+        <p>Hello! I am Amir and this is my official website which contain information about me</p>
+        
+        <div style="text-align:center; margin: 20px 0;">
+            <img src="image/pfp.png" alt="My Profile Picture" width="250" style="border: 5px solid #000080; border-radius: 10px;">
+            <p><i>I am single</i></p>
+        </div>
+
+        <h3>Quick Navigation</h3>
+        <ul>
+            <li>Learn about my <a href="biodata.html">Personal Details</a></li>
+            <li>View my <a href="gallery.html">Photo Gallery</a></li>
+        </ul>
+
+        <h3 style="color: #000080; border-bottom: 2px solid #000080; margin-top: 30px;">
+            <i class="fa-solid fa-star"></i> My Top Picks
+        </h3>
+        <ol style="line-height: 1.8;">
+            <li><strong>Favorite Artist:</strong> Hana Hope, Uru, Aimer</li>
+            <li><strong>Favorite Song:</strong> Hana Hope - Destination of the journey & Akairo, LONGMAN - Spiral </li>
+            <li><strong>Favorite Anime:</strong> Gintama - A 10/10, this is my favorite because of the balance between comedy, action and drama</li>
+            <li><strong>Favorite Manga:</strong> Berserk - I really enjoy the dark fantasy art where Kentarou Miura the author had improved all over the years but since it was unfinished it made me pretty sad</li>
+        </ol>
+        <h3>Honorable Mention</h3>
+            <ul>
+                <li><strong>Anime:</strong> Steins;Gate - A slow start to the MAD SCIENTIST journey which unravel the mysteries of time looping and the killing of scientist named Kurisu Makisu </li>
+                <li><strong>Manga:</strong> Slam Dunk - A great classic from the 90s the art which Takehiko Inoue improved the art made the journey really felt incredible</li>
+            </ul>
+    </div> 
+
+<audio id="homeMusic" loop>
+    <source src="sounds/Reveries in the Crimson Beyond.mp3" type="audio/mpeg">
+</audio>
+
+<div id="music-control" onclick="toggleMusic()" style="cursor: pointer; padding: 10px; background: #000080; color: white; display: inline-block;">
+    <span id="music-icon">🔈 Music: OFF</span>
+</div>
+
+<footer>
+    <p>&copy; WAN AMIR HAIQAL | UNIVERSITI TEKNOLOGI MARA 2026</p>
+</footer>
+
+
+<script>
+    window.onload = function() {
+        alert("Welcome to My Personal Website");
+    };
+ 
+    var myAudio = document.getElementById("homeMusic");
+    var musicIcon = document.getElementById("music-icon");
+
+    function toggleMusic() {
+        if (myAudio.paused) {
+            myAudio.play().catch(error => console.log("Playback failed:", error));
+            musicIcon.innerHTML = "🔊 Music: ON";
+        } else {
+            myAudio.pause();
+            musicIcon.innerHTML = "🔈 Music: OFF";
+        }
+    }
+
+    document.body.addEventListener('click', function() {
+        if (myAudio.paused) {
+            myAudio.play().catch(error => console.log("Autoplay prevented:", error));
+            musicIcon.innerHTML = "🔊 Music: ON";
+        }
+    }, { once: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | My Personal Website</title>
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #ddd;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            border-color: #000080;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #eee;
+        }
+
+        .gallery-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #000080;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="video/background.mp4" type="video/mp4">
+    </video>
+
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 40px; background-color: #000080; border-bottom: 1px solid #ddd;">
+     <div style="width: 212px;"></div> 
+      <h1 style="margin: 0; font-family: sans-serif;">My Family</h1>
+      <div class="header-clock">
+      <iframe src="https://free.timeanddate.com/clock/ia8fgm3t/n5090/fn6/fs18/fcfff/tc000080/pct/ahr/ftbi/pa12/tt0/tw1/tm1/th2/tb4" frameborder="0" width="188" height="68" allowtransparency="true"></iframe>
+    </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <div class="container">
+        <h2>Photo Collection</h2>
+        <p>A collection of moments from my studies, competitions, and personal life.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="image/bb1.jpeg" alt="Bicara Berirama Competition">
+                <p>National Bicara Berirama</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="image/lifecampus.jpeg" alt="UiTM Student Life">
+                <p>UiTM Campus Life</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="image/gyms.jpeg" alt="Gym">
+                <p>Gym with bros</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="image/intern.jpeg" alt="Internship at SUK">
+                <p>Industrial Training at SUK</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="image/13.jpeg" alt="Moment 5">
+                <p>Award for Excellence SPM Student</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="image/10.jpeg" alt="Moment 6">
+                <p>PRS Family</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="image/15.jpeg" alt="Moment 7">
+            <p></p>
+            </div>
+
+            <div class="gallery-item"><img src="image/17.jpeg" alt="Moment 8"></div>
+            <div class="gallery-item"><img src="image/2.jpeg" alt="Moment 9"></div>
+            <div class="gallery-item"><img src="image/3.jpeg" alt="Moment 10"></div>
+            <div class="gallery-item"><img src="image/7.jpeg" alt="Moment 11"></div>
+            <div class="gallery-item"><img src="image/12.jpeg" alt="Moment 12"></div>
+            <div class="gallery-item"><img src="image/8.jpeg" alt="Moment 13"></div>
+            <div class="gallery-item"><img src="image/19.jpeg" alt="Moment 14"></div>
+            <div class="gallery-item"><img src="image/16.jpeg" alt="Moment 16"></div>   
+
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; WAN AMIR HAIQAL | UNIVERSITI TEKNOLOGI MARA 2026</p>
+    </footer>
+
+</body>
+</html>
